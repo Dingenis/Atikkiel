@@ -1,4 +1,4 @@
-# Atikkiel
+# abnamro-tikkie
 Android Tikkie Library
 
 ## Getting Started
