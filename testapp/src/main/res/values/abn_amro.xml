@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abn_ambro_api_key" translatable="false" templateMergeStrategy="preserve">
+        lPwwLu3CS7Ic9zXJaxK6ZFypSOJd0vmq
+    </string>
+
+    <string name="abn_ambro_private_key" translatable="false" templateMergeStrategy="preserve">
+        -----BEGIN RSA PRIVATE KEY-----
+MIIEpgIBAAKCAQEA8XsjIvsPugjC8Pw0cTvj+tbJc8O/7c5vk5y0tHfdRqE7p3sM
+9HisN52dgsKgBJ3uwspxlo0SZvPeA60c2LrUUswBT1rBenX4XBl0BKsmBpurZ5Ox
+V7RLYYMsCum3gVBf3cYLyaAXjicGeWmNzJ9uTuKp7q3n/Bp4iJso640IQlkOQ3ez
+KR0EwSP37YWX+r/CEg2FLlDKLaIk7VzVJmQEn5O2/+GU6o9WV95Q+WinyhiLcVYo
+H/sQREUEMYCIC3gSooxxtX7mFENF/TrrDYof3tjIHyieNtyJJmuHshuEACkn2mLI
+b/PUfTIW5tVuy/xYOqqvNglkAFPP6PvbdGfKmwIDAQABAoIBAQCfHFGkhORx4cAA
+5Uzwp1OqPcfzHTHjUTg3fPOcTbZhCW+zBOMeWjyvUI0uUWr6X82oT5fUaROM/nZ0
+2aW+MCwiegUK8nO1avHATY0iXlrp07x2vNwHO+bHU5S7hA/DhuAD0rCFo5Sht5kO
+erxR7WLTW4o4mCHY/OAaspGd0wl0HM4dKrXWh5SwkqVeHkQHgEHdqJdN7Ibo3Sn+
+7tWvNSA+uu/koqDXjMPk6Un/SCdNEHhRCpxLl1P/IJfSViTY947FT1cVkRXDrKE+
+BnpSV/MFj+pWY+J9N6CzFga7XW/FrjSheSB0tATneBeybxBKmSTxbJw40hHzewz9
+cT5+dRLhAoGBAPqs+gMSdHChcLBTNj7oTNsKHZisRgH7lVZclFHawv5aaIpjekLc
+4sdekExDJRuLvvPliQ19vTMLBJwb0Sc114QsZNk0U5OgtLSMH7wy2saAJP9GIsqY
+8OJ1cJpkUKJMDJHzK4rpgJwCavWDEGswVD7nrgY02F9lc951bvfh4qqDAoGBAPac
+Kl083VJ+3erFe5KpcYHSabYL8xBAunHMJTGaFKGngHrtdyP9HMlMoJVuvifMJY5i
+OcyXVeyNQOMX6hL/+ivzPkBwVOJUPaPdB0L1X3xKhDc4hyS5ADAGOelMxZY3cxEx
+J/sm4atBolHtpdCH7ibNTeSlzzf1m97bZAfkN0QJAoGBAMuElJbZ7N9ksvD1Hh2E
+zKEpXU4Oz+fcMiqjj2fFjHqlPCrfCOwwGY50IANKoF3031t1CAiEBY/jaiK0EuMa
+u5b71ATkjtZUq2HKQhmx0B1I/MCkWKrT8P5rCrjOqQibZbk5DCkD2v7Ol7gsaLAd
+1MgdoRQ441LQM3pxLV7jbfuxAoGBAOjXbhB2hSl8657dMt246pj+yBzAj5CK7P7B
+F2UL6+rtshte1py+QU228e/ljdkZoWQcTiJjyRb+D4PbcoDZ+6U/l0lURnEjxMdQ
+y6hm8O7zlH5m+wKrQggV+NvURsKcPCLBXNR/U5dU8yOT1HldvngYZDE8dLiLR85V
+Ks9gpOWxAoGBANGN1k/6cx0b29o5s57SVfCi3G9ljw7u0jCLj305LaNepMFnQvKw
+C/inOiQPELAmKT1oKbhlGTsOWGMcyq2e98vqTN1U/JfVIp5iAHYlbpf0e96ksnlH
+/ijuywz0zlNxlty4S/Mpy5Kv2mbCj2Wa/Qo9emvX2tGXbytIgTWtAolI
+-----END RSA PRIVATE KEY-----
+
+    </string>
+</resources>
