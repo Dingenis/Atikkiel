@@ -15,7 +15,7 @@ implementation 'nl.dss.abnamro:tikkie:0.0.1'
         Tikkie.setup(config)
 ```
 
-3. All done! You can now use the library to authenticate for the ABN AMRO APIs
+3. All done! You can now use the library to use the Tikkie API
 
 ## Platforms
 
