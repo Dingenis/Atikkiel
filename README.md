@@ -10,7 +10,7 @@ implementation 'nl.dss.abnamro:tikkie:0.0.1'
 
 2. Initialize the library with your API key and your private key
 ```kotlin
-        // Setup the authentication library
+        // Setup the library
         val config = TikkieConfig(getString(R.string.abn_ambro_api_key), getString(R.string.abn_ambro_private_key))
         Tikkie.setup(config)
 ```
