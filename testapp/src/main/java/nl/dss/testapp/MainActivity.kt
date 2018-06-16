@@ -27,6 +27,24 @@ class MainActivity : AppCompatActivity() {
         Platform.get(object : Callback<List<Platform>> {
             override fun onSuccess(value: List<Platform>) {
                 val platform = value[0]
+                platform.users(object : Callback<List<User>> {
+                    override fun onSuccess(value: List<User>) {
+                        for(user in value) {
+                            Log.i("MainActivity", user.name)
+                        }
+                    }
+
+                    override fun onApiError(errors: List<ApiError>) {
+                        for(error : ApiError in errors) {
+                            Log.e("MainActivity", error.message)
+                        }
+                    }
+
+                    override fun onException(throwable: Throwable) {
+                        throw throwable
+                    }
+                })
+
                 platform.user(userConfig, object : Callback<User> {
                         override fun onSuccess(value: User) {
                             Log.i("MainActivity", "User created with token id: " + value.token)
@@ -43,7 +61,6 @@ class MainActivity : AppCompatActivity() {
                         }
                     })
             }
-
             override fun onApiError(errors: List<ApiError>) {
                 for(error : ApiError in errors) {
                     Log.e("MainActivity", error.message)
@@ -70,7 +87,6 @@ class MainActivity : AppCompatActivity() {
             override fun onException(throwable: Throwable) {
                 throw throwable
             }
-
         })
 
     }
