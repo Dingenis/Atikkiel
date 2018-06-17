@@ -3,6 +3,7 @@ package nl.dss.testapp
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import kotlinx.android.synthetic.main.activity_main.*
 import nl.dss.atikkiel.Callback
 import nl.dss.atikkiel.Tikkie
 import nl.dss.atikkiel.TikkieConfig
@@ -33,9 +34,12 @@ class MainActivity : AppCompatActivity() {
                         }
 
                         override fun onApiError(errors: List<ApiError>) {
+                            val builder = StringBuilder()
                             for(error : ApiError in errors) {
+                                builder.appendln(error.message)
                                 Log.e("MainActivity", error.message)
                             }
+                            status_text.text = builder.toString()
                         }
 
                         override fun onException(throwable: Throwable) {
@@ -45,9 +49,12 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onApiError(errors: List<ApiError>) {
+                val builder = StringBuilder()
                 for(error : ApiError in errors) {
+                    builder.appendln(error.message)
                     Log.e("MainActivity", error.message)
                 }
+                status_text.text = builder.toString()
             }
 
             override fun onException(throwable: Throwable) {
@@ -58,13 +65,16 @@ class MainActivity : AppCompatActivity() {
         val platformConfig = PlatformSetupConfig("SmartScan", "0600000000", "abc@gmail.com", PlatformUsage.PAYMENT_REQUEST_FOR_MYSELF)
         Platform.create(platformConfig, object : Callback<Platform> {
             override fun onSuccess(value: Platform) {
-                Log.i("MainActivity", value.name)
+                status_text.text = "Created platform " + value.name + ":" +value.token
             }
 
             override fun onApiError(errors: List<ApiError>) {
+                val builder = StringBuilder()
                 for(error : ApiError in errors) {
+                    builder.appendln(error.message)
                     Log.e("MainActivity", error.message)
                 }
+                status_text.text = builder.toString()
             }
 
             override fun onException(throwable: Throwable) {

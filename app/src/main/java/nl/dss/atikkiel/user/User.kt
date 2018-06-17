@@ -2,11 +2,13 @@ package nl.dss.atikkiel.user
 
 import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
+import kotlinx.coroutines.experimental.android.UI
 import kotlinx.coroutines.experimental.async
 import kotlinx.coroutines.experimental.launch
 import nl.dss.atikkiel.Tikkie
 import nl.dss.atikkiel.authenticaiton.ErrorResponse
 import nl.dss.atikkiel.platform.Platform
+import org.jetbrains.anko.coroutines.experimental.bg
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -48,10 +50,10 @@ data class User(@SerializedName("userToken") val token : String,
                         val errorBody = response.errorBody()
                         if(errorBody != null) {
                             val json = errorBody.string()
-                            val deferred = async {
+                            val deferred = bg {
                                 Gson().fromJson<ErrorResponse>(json, ErrorResponse::class.java)
                             }
-                            launch {
+                            async(UI) {
                                 val result = deferred.await()
                                 callback.onApiError(result.errors)
                             }
@@ -80,10 +82,10 @@ data class User(@SerializedName("userToken") val token : String,
                       val errorBody = response.errorBody()
                       if(errorBody != null) {
                           val json = errorBody.string()
-                          val deferred = async {
+                          val deferred = bg {
                               Gson().fromJson<ErrorResponse>(json, ErrorResponse::class.java)
                           }
-                          launch {
+                          async(UI) {
                               val result = deferred.await()
                               callback.onApiError(result.errors)
                           }
