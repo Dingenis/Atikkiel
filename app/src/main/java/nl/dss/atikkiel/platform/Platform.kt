@@ -48,6 +48,10 @@ class Platform protected constructor() {
         User.create(this, config, callback)
     }
 
+    fun users(callback: nl.dss.atikkiel.Callback<List<User>>) {
+        User.get(token, callback)
+    }
+
     companion object {
         fun create(info : PlatformSetupConfig, callback: nl.dss.atikkiel.Callback<Platform>) {
             val service = Tikkie.getPlatformService()
