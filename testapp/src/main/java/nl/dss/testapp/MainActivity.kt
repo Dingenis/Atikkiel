@@ -87,26 +87,34 @@ class MainActivity : AppCompatActivity() {
                 throw throwable
             }
         })
+/*
+        //Setup config for platform
+        val pConfig = PlatformSetupConfig.new {
+            name = "MyPlatform"
+            phone = "0000000000"
+            email = "abc@gmail.com"
+            usage = PlatformUsage.PAYMENT_REQUEST_FOR_MYSELF
+        }
 
-        /*val platformConfig = PlatformSetupConfig("SmartScan", "0600000000", "abc@gmail.com", PlatformUsage.PAYMENT_REQUEST_FOR_MYSELF)
-        Platform.create(platformConfig, object : Callback<Platform> {
+        //Create platform
+        Platform.create(pConfig, object : Callback<Platform> {
             override fun onSuccess(value: Platform) {
-                status_text.text = "Created platform " + value.name + ":" +value.token
+                log("Platform created with id: " + value.token)
             }
 
             override fun onApiError(errors: List<ApiError>) {
-                val builder = StringBuilder()
+                //Log errors
                 for(error : ApiError in errors) {
-                    builder.appendln(error.message)
+                    log(error.message)
                     Log.e("MainActivity", error.message)
                 }
-                status_text.text = builder.toString()
             }
 
             override fun onException(throwable: Throwable) {
                 throw throwable
             }
         })*/
+
 
     }
 }

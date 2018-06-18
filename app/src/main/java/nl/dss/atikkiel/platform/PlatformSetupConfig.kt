@@ -9,13 +9,23 @@ import com.google.gson.annotations.SerializedName
  * Description...
  */
 data class PlatformSetupConfig(@SerializedName("name")
-                               val name : String,
+                               var name : String,
 
                                @SerializedName("phoneNumber")
-                               val phone : String,
+                               var phone : String,
 
                                @SerializedName("email")
-                               val email : String,
+                               var email : String,
 
                                @SerializedName("platformUsage")
-                               val usage : PlatformUsage)
+                               var usage : PlatformUsage) {
+    protected  constructor() : this("", "", "", PlatformUsage.PAYMENT_REQUEST_FOR_MYSELF)
+
+    companion object {
+        inline fun new(block: PlatformSetupConfig.() -> Unit) : PlatformSetupConfig {
+            var setup = PlatformSetupConfig()
+            block.invoke(setup)
+            return setup
+        }
+    }
+}
