@@ -9,13 +9,29 @@ import com.google.gson.annotations.SerializedName
  * Description...
  */
 data class UserSetupConfig(@SerializedName("name")
-                           val name : String,
+                           var name : String,
 
                            @SerializedName("phoneNumber")
-                           val phone : String,
+                           var phone : String,
 
                            @SerializedName("iban")
-                           val iban : String,
+                           var iban : String,
 
                            @SerializedName("bankAccountLabel")
-                           val label : String)
+                           var label : String) {
+
+    /*
+    * Constructs empty instance of UserSetupConfig
+    *
+    * */
+    protected constructor() : this("", "", "", "")
+
+    companion object {
+        inline fun new(block: UserSetupConfig.() -> Unit) : UserSetupConfig {
+            val config = UserSetupConfig()
+            block.invoke(config)
+            return config
+        }
+    }
+
+}
