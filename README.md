@@ -1,5 +1,5 @@
-# abnamro-tikkie
-Android Tikkie Library
+# Android Tikkie SDK
+SDK for using the Tikkie API on Android
 
 ## Getting Started
 1. Add the library to your project
